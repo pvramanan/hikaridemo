@@ -35,7 +35,7 @@ public abstract class AbstractCountryController {
 	}
 
 	@ApiOperation(notes = "This resource can be used to get country details", value = "Perform the get country details")
-	@GetMapping(URI_COUNTRY_COLLECTION + "{id}")
+	@GetMapping(URI_COUNTRY_COLLECTION + "/{id}")
 	@ApiResponses({ @ApiResponse(code = 200, message = "successfully return the country details") })
 	public Country getCountry(
 			@ApiParam(value = "id of the country", required = true, defaultValue = "INR") @PathVariable(name = "id", required = true, value = "id") @Valid String countryId) {
